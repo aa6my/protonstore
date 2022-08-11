@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamp('dateTime');
             $table->boolean('completed')->default(false);
-            $table->string('type'); // pickup, deliver
+            $table->string('color'); // black, silver, red
             $table->timestamps();
         });
     }

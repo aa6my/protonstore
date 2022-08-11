@@ -17,7 +17,7 @@
 ======================*/
 
 #order hr,
-#kitchenOrder hr {
+#carOrder hr {
     height: 1.5px;
     width: 100%;
 }
@@ -64,7 +64,7 @@
 .first-order .alert,
 .kitchen-active-orders .alert,
 .kitchen-previous-orders .alert,
-#kitchenOrder .primary-btn {
+#carOrder .primary-btn {
     margin: 0;
     padding: 0;
     display: flex;
@@ -80,7 +80,7 @@
     border-radius: 0.5rem;
 }
 
-#kitchenOrder a.primary-btn {
+#carOrder a.primary-btn {
     padding: 20px 30px;
     border-radius: 30%;
 }

@@ -44,7 +44,7 @@
             <ul class="nav-links">
             @if (auth()->user()->role == 'admin')
                 <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li><a href="{{ route('kitchenOrder') }}">Orders</a></li>
+                <li><a href="{{ route('carOrder') }}">Orders</a></li>
                 <li><a href="{{ route('car') }}">Car</a></li>
                 <li><a href="{{ route('discount') }}">Discount</a></li>
                 <li><a href="{{ route('createAccount') }}">Account</a></li>
@@ -73,7 +73,7 @@
         @if (auth()->user()->role == 'admin')
             <li ><a href="{{ route('dashboard') }}" id="sidebar-dashboard"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a></li>
             <br>
-            <li ><a href="{{ route('kitchenOrder') }}" id="sidebar-orders"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Orders</a></li>
+            <li ><a href="{{ route('carOrder') }}" id="sidebar-orders"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Orders</a></li>
             <br>
             <li ><a href="{{ route('car') }}" id="sidebar-car"><i class="fa fa-book" aria-hidden="true"></i>Car</a></li>
             <br>
@@ -82,7 +82,7 @@
             <li ><a href="{{ route('createAccount') }}" id="sidebar-account"><i class="fa fa-user" aria-hidden="true"></i>Account</a></li>
             <br>
         @else
-            <li ><a href="{{ route('kitchenOrder') }}" id="sidebar-orders"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Orders</a></li>
+            <li ><a href="{{ route('carOrder') }}" id="sidebar-orders"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Orders</a></li>
             <br>
         @endif
             <li >

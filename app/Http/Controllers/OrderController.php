@@ -25,22 +25,22 @@ class OrderController extends Controller
         return view('order', compact('activeOrder', 'allOrders'));
     }
 
-    public function kitchenOrder() { // Kitchen or Admin's order page
+    public function carOrder() { // Kitchen or Admin's order page
         if (auth()->user()->role == 'customer')
             abort(403, 'This route is only meant for restaurant staffs.');
 
         $activeOrders = Order::where('completed', 0)->orderBy('dateTime', 'desc')->paginate(8);
         $firstOrder = $activeOrders->first();
-        return view('kitchenOrder', compact('firstOrder', 'activeOrders'));
+        return view('carOrder', compact('firstOrder', 'activeOrders'));
     }
 
-    public function specificKitchenOrder(Order $order) { // Kitchen or Admin's specific order page
+    public function specificcarOrder(Order $order) { // Kitchen or Admin's specific order page
         if (auth()->user()->role == 'customer')
             abort(403, 'This route is only meant for restaurant staffs.');
 
         $activeOrders = Order::where('completed', 0)->orderBy('dateTime', 'desc')->paginate(8);
         $firstOrder = $order;
-        return view('kitchenOrder', compact('firstOrder', 'activeOrders'));
+        return view('carOrder', compact('firstOrder', 'activeOrders'));
     }
 
     public function orderStatusUpdate(CartItem $orderItem) { // Kitchen or Admin update order status
@@ -53,11 +53,11 @@ class OrderController extends Controller
         $cartItems = CartItem::where('order_id', $orderItem->order_id)->paginate(8);
         foreach ($cartItems as $item) {
             if (!$item->fulfilled)
-                return redirect()->route('kitchenOrder');
+                return redirect()->route('carOrder');
         }
         $orderItem->order->completed = true;
         $orderItem->push();
-        return redirect()->route('kitchenOrder');
+        return redirect()->route('carOrder');
     }
 
     public function previousOrder() { // Kitchen or Admin view all previous orders

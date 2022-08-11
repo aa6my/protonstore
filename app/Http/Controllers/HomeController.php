@@ -12,7 +12,7 @@ class HomeController extends Controller
         if (Auth::user() && auth()->user()->role == 'admin')
             return redirect()->route('dashboard');
         else if (Auth::user() && auth()->user()->role == 'kitchenStaff')
-            return redirect()->route('kitchenOrder');
+            return redirect()->route('carOrder');
         return view('home');
     }
 }

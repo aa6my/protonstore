@@ -27,7 +27,7 @@
         <h3 class="mt-4 mb-2">No Previous Orders Yet.</h3>
         <p class="text-muted">There seems to be no previous customer orders for now...</p>
         <div class="d-flex mt-3">
-            <a href="{{ route('kitchenOrder') }}" class="primary-btn mx-3">Active Orders</a>
+            <a href="{{ route('carOrder') }}" class="primary-btn mx-3">Active Orders</a>
             <a href="{{ route('dashboard') }}" class="primary-btn mx-3">View Dashboard</a>
         </div>
     </div>
@@ -49,7 +49,7 @@
             <tbody>
                 @foreach ($previousOrders as $order)
                     <tr>
-                        <th scope="row"><a href="{{ route('specificKitchenOrder', $order->id) }}">#{{ $order->id }}</a></th>
+                        <th scope="row"><a href="{{ route('specificcarOrder', $order->id) }}">#{{ $order->id }}</a></th>
                         <td>{{ $order->getOrderDate() }}</td>
                         <td>{{ $order->getOrderTime() }}</td>
                         <td>$ {{ $order->getTotalFromScratch() }}</td>
@@ -69,7 +69,7 @@
             </tbody>
         </table>
         <div class="my-md-5 mt-4 mb-5 d-flex flex-md-row flex-column justify-content-md-between">
-            <a href="{{ route('kitchenOrder') }}" class="primary-btn">Active Orders</a>
+            <a href="{{ route('carOrder') }}" class="primary-btn">Active Orders</a>
             <div class="col-md-8 col-12 d-flex justify-content-md-end justify-content-center">
             {{ $previousOrders->links() }}
             </div>

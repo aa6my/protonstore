@@ -64,8 +64,8 @@ Route::post('/discount/{discount}', [DiscountController::class, 'update'])->name
 // Order
 Route::get('/order', [OrderController::class, 'index'])->name('order');
 Route::get('/order/{order}', [OrderController::class, 'show'])->name('specificOrder');
-Route::get('/staff/order', [OrderController::class, 'kitchenOrder'])->name('kitchenOrder');
-Route::get('/staff/order/{order}', [OrderController::class, 'specificKitchenOrder'])->name('specificKitchenOrder');
+Route::get('/staff/order', [OrderController::class, 'carOrder'])->name('carOrder');
+Route::get('/staff/order/{order}', [OrderController::class, 'specificcarOrder'])->name('specificcarOrder');
 Route::put('/staff/order/update/{orderItem}', [OrderController::class, 'orderStatusUpdate'])->name('orderStatusUpdate');
 Route::get('/staff/previous-order', [OrderController::class, 'previousOrder'])->name('previousOrder');
 

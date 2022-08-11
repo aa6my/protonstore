@@ -73,14 +73,13 @@
                         <!-- CHECKOUT ALONG WITH DISCOUNT CODE APPLICATION START -->
                         <form action="{{ route('cartCheckout') }}" method="post">
                             @csrf
-                            <div class="d-flex flex-column px-3 mt-5 col-12 align-items-center">
+                            <div class="d-flex flex-column px-3 mt-5 col-12">
                                 <h5 class="text-secondary">Discount Code</h5>
                                 <input type="text" class="form-control mt-3" name="discountCode" id="discountCode" placeholder="Place your discount code here...">
                             </div>
 
-                            <h5 class="text-secondary mt-5 text-center">Order Date and Time</h5>
+                            <h5 class="text-secondary mt-5">Order Date and Time</h5>
                             <div class="d-flex flex-column mt-4 px-3">
-                                <!-- Select Date time (only applicable for pickup / deliver, not deliver now) -->
                                 <!-- Perform validation to ensure they don't select time that has passed -->
                                 <input class="form-control @error('dateTime') is-invalid @enderror" 
                                 name="dateTime" type="datetime-local" value="{{ old('dateTime') }}" required>
@@ -91,19 +90,25 @@
                                 @enderror
                             </div>
 
-                            <!-- deliver / pickup ==> radio -->
-                            <h5 class="text-secondary mt-5 text-center">Order Type</h5>
-                            <div class="d-flex justify-content-center mt-4">
-                                <div class="form-check form-check-inline">
-                                    <input value="pickup" class="form-check-input @error('type') is-invalid @enderror h5" type="radio" name="type" id="pickupRadio">
-                                    <label class="form-check-label" for="pickupRadio">
-                                        Pickup
+                            <!-- black / silver / red ==> radio -->
+                            <h5 class="text-secondary mt-5">Color</h5>
+                            <div class="d-flex mt-4">
+                            <div class="form-check form-check-inline">
+                                    <input value="black" class="form-check-input @error('type') is-invalid @enderror h5" type="radio" name="type" id="blackRadio">
+                                    <label class="form-check-label" for="blackRadio">
+                                        Black
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input value="deliverAway" class="form-check-input @error('type') is-invalid @enderror h5" type="radio" name="type" id="deliverRadio">
-                                    <label class="form-check-label" for="deliverRadio">
-                                        Deliver
+                                    <input value="silver" class="form-check-input @error('type') is-invalid @enderror h5" type="radio" name="type" id="silverRadio">
+                                    <label class="form-check-label" for="silverRadio">
+                                        Silver
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input value="redAway" class="form-check-input @error('type') is-invalid @enderror h5" type="radio" name="type" id="redRadio">
+                                    <label class="form-check-label" for="redRadio">
+                                        Red
                                     </label>
                                     @error('type')
                                         <span class="invalid-feedback" role="alert">

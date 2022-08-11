@@ -70,13 +70,15 @@ class CartController extends Controller
 
     // User perform cart checkout
     public function checkout(Request $request) {
+        // dd($request);
         if (auth()->user()->role != 'customer')
             abort(403, 'This route is only meant for customers.');
             
         $data = $this->validate($request, [
-            'type' => ['required'], // order type (pickup / deliver)
+            'type' => ['required'], // color (black / silver / red)
             'dateTime' => ['required', 'after_or_equal:today'], // order date time (when the user wants to be served.)
         ]);
+        // dd($data);
 
         $subtotal = 0;
         $cartItems = auth()->user()->cartItems->where('order_id', null);

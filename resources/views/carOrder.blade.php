@@ -5,7 +5,7 @@
 @endsection
 
 @section('bodyID')
-{{ 'kitchenOrder' }}@endsection
+{{ 'carOrder' }}@endsection
 
 @section('navTheme')
 {{ 'light' }}@endsection
