@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins", sans-serif;
+}
+
+
+/* NAV */
+
+nav.home-nav {
+    display: none !important;
+}
+
+nav .nav-links {
+    width: 65%;
+}
+
+.burger div {
+    background-color: rgb(82, 82, 82);
+}
+
+
+/*-------------------
+    Side Bar
+---------------------*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    min-height: 100vh;
+    background-color: white;
+    box-shadow: 5px 0 5px -5px #4b4949;
+}
+
+#logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 2rem auto;
+    user-select: none;
+}
+
+.sidebar ul {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#sidebar-dashboard,
+#sidebar-discount,
+#sidebar-orders,
+#sidebar-car,
+#sidebar-account,
+#sidebar-logout {
+    display: block;
+    line-height: 65px;
+    font-size: 18px;
+    color: black;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.sidebar-active {
+    border: 1px solid #e8360e !important;
+    color: #e8360e !important;
+}
+
+.sidebar ul a i {
+    margin-right: 15px;
+}
+
+
+/*-------------------
+Responsive Navigation
+---------------------*/
+
+@media screen and (max-width: 990px) {
+    nav.home-nav {
+        display: flex !important;
+    }
+    .sidebar {
+        display: none;
+    }
+    .pl-250 {
+        padding-left: 0 !important;
+    }
+}
+
+
+/*-------------------
+Main Content Starts Here
+---------------------*/
+
+.content {
+    margin-left: 250px;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding-left: 70px;
+}
+
+.pl-250 {
+    padding-left: 250px;
+}
+
+#title {
+    font-size: 45px;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+#report {
+    margin-top: 15px;
+    width: fit-content;
+}
+
+#sales-overview {
+    height: 500px;
+    margin: 12.5px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#sales-overview-title {
+    padding-top: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+#reservation {
+    margin: 12.5px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#reservation-title {
+    padding-top: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+#trending {
+    height: 250px;
+    width: 389px;
+    margin: 12.5px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#trending-title {
+    padding-top: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+#feedback {
+    height: 250px;
+    width: 389px;
+    margin: 12.5px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#feedback-title {
+    padding-top: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+#sales-overview:hover,
+#reservation:hover,
+#trending:hover,
+#feedback:hover {
+    transition: all 0.5s;
+    box-shadow: 5px 5px 5px -5px #4b4949;
+}
+
+
+/*-------------------
+
+Main Content Ends Here
+
+---------------------*/

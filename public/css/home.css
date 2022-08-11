@@ -1,0 +1,224 @@
+.banner,
+.chefs,
+.contact {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.chefs,
+.contact {
+    min-height: 90vh;
+    padding: 5vh 0;
+}
+
+.title {
+    letter-spacing: 1.5px;
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+}
+
+
+/* ====================
+            NAV 
+    ======================*/
+
+.home-nav {
+    /* text-shadow: 2px 2px 1px black; */
+}
+
+#home .burger div {
+    background-color: rgb(206, 50, 50);
+}
+
+#home .logo-name,
+#register .logo-name,
+.nav-links li a {
+    color: rgb(206, 50, 50);
+}
+
+
+/* ====================
+            BANNER 
+    ======================*/
+
+.banner {
+    background-image: url('/images/protonbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.banner::after {
+    /* shader */
+    content: "";
+    position: absolute;
+    background: black;
+    top: 0%;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    opacity: 0.3;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #EFEFEF;
+    min-height: 100vh;
+    padding-left: 5vw;
+}
+
+.details h3 {
+    color: #d8d8d8;
+    font-size: 18px;
+    letter-spacing: 3px;
+    z-index: 2;
+}
+
+.details h1 {
+    font-weight: bold;
+    font-size: 45px;
+    margin: 0.6rem 0 2.7rem 0;
+    z-index: 2;
+}
+
+.details button {
+    width: 200px;
+}
+
+
+/* =============================
+            CHEF SECTION 
+    ===============================*/
+
+.chefs {
+    background-color: #f7f7f7;
+}
+
+.chefs .card {
+    min-height: 450px;
+    background-color: #d8d8d8;
+    border: none;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.chefs .card:hover {
+    box-shadow: 6px 8px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.chef-img {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.chef-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.chef-desc {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.chef-name {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.chef-position {
+    color: rgb(122, 122, 122);
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+/* =============================
+            CONTACT SECTION 
+    ===============================*/
+
+.contact {
+    background-color: #e0e0e0;
+}
+
+.contact-wrapper,
+.chefs-wrapper {
+    min-height: 70vh;
+    margin-bottom: 8vh;
+}
+
+.form-wrapper,
+.gmap {
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.contact form {
+    max-height: 100%;
+    width: 90%;
+}
+
+textarea {
+    max-height: 30vh;
+}
+
+.msg-btn {
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.msg-btn:hover {
+    background-color: #f69e82;
+}
+
+.gmap {
+    justify-content: center;
+    width: 50%;
+    margin-top: 5vh;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact,
+    .chefs,
+    .chefs-wrapper {
+        height: auto;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+    .form-wrapper,
+    .contact form,
+    .gmap {
+        width: 90%;
+        margin: auto;
+    }
+    .msg-btn {
+        margin-top: 2vh;
+        margin-bottom: 8vh;
+    }
+    /* chef section */
+    .chefs .card {
+        height: 250px;
+        /* margin-top: 5vh; */
+    }
+    .chef-img img {
+        max-width: 80%;
+        height: auto;
+        border-radius: 50%;
+    }
+}

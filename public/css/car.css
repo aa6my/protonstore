@@ -1,0 +1,75 @@
+/* ====================
+        MAIN 
+======================*/
+
+#car .main {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEFEF;
+}
+
+.car-title {
+    text-align: center;
+    font-style: italic;
+    color: black;
+    font-size: 30px;
+}
+
+a.car-title:link {
+    color: black;
+    text-decoration: none;
+}
+
+.car-bar {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: solid 2px #D2D2CF;
+}
+
+.car-type-button {
+    font-size: 18px;
+    padding: 0 12px;
+    border-radius: 0;
+    margin-left: -10px;
+    background-color: rgb(231, 231, 231);
+    border-color: rgb(231, 231, 231);
+}
+
+input.price-class:invalid+span:after {
+    content: '✖';
+    color: red;
+    padding-left: 5px;
+}
+
+input.price-class:valid+span:after {
+    content: '✓';
+    color: green;
+    padding-left: 5px;
+}
+
+#filter-button {
+    margin-right: 2%;
+}
+
+.dropdown-menu {
+    min-width: inherit;
+}
+
+.carImage {
+    border-radius: 10px;
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.fa-exclamation-circle {
+    color: red;
+}
+
+.fa-tree {
+    color: green;
+}
+
+.fa-leaf {
+    color: green;
+}

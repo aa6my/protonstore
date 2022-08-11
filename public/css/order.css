@@ -1,0 +1,167 @@
+/* ====================
+        NAV 
+======================*/
+
+#order .burger div {
+    background-color: rgb(82, 82, 82);
+}
+
+#order .logo-name,
+.nav-links li a {
+    color: rgb(82, 82, 82);
+}
+
+
+/* ====================
+    ORDER GENERAL 
+======================*/
+
+#order hr,
+#kitchenOrder hr {
+    height: 1.5px;
+    width: 100%;
+}
+
+
+/* EMPTY ORDER */
+
+.hero-wrapper {
+    max-height: 50vh;
+}
+
+.hero-wrapper img {
+    max-height: 50vh;
+    width: auto;
+}
+
+.empty-order {
+    min-height: 100vh;
+}
+
+.empty-order button {
+    padding: 10px 30px !important;
+}
+
+
+/* ACTIVE ORDER */
+
+.active-order,
+.first-order {
+    min-height: 60vh;
+    margin-top: 18vh;
+    margin-bottom: 7vh;
+}
+
+.order-cart,
+.order-summary {
+    background-color: #f3f3f3;
+    border-radius: 2rem;
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.active-order .alert,
+.order-histories .alert,
+.first-order .alert,
+.kitchen-active-orders .alert,
+.kitchen-previous-orders .alert,
+#kitchenOrder .primary-btn {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    height: 30px;
+    width: fit-content;
+}
+
+#previousOrder a.primary-btn {
+    height: fit-content;
+    padding: 5px 20px;
+    border-radius: 0.5rem;
+}
+
+#kitchenOrder a.primary-btn {
+    padding: 20px 30px;
+    border-radius: 30%;
+}
+
+.order-cart-item {
+    width: 100%;
+}
+
+.car-img-wrapper {
+    height: 15vh;
+}
+
+.car-img-wrapper img {
+    border-radius: 10%;
+    height: 110px;
+    width: 110px;
+    object-fit: cover;
+}
+
+.car-desc-wrapper {
+    width: 40%;
+}
+
+.car-desc-wrapper .mobile {
+    display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+    .car-img-wrapper {
+        height: 12vh;
+    }
+    .car-img-wrapper img {
+        height: 100px;
+        width: 100px;
+    }
+    .car-desc-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .desktop {
+        display: none;
+    }
+    .car-desc-wrapper .mobile {
+        display: flex !important;
+    }
+    .car-desc-wrapper>div {
+        justify-content: space-around !important;
+    }
+    .car-desc-wrapper .alert {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+/* ORDER SUMMARY */
+
+.order-summary {
+    height: fit-content;
+}
+
+
+/* ORDER HISTORIES SECTION */
+
+.order-histories {
+    /* padding-top: 5vh; */
+    padding-bottom: 12vh;
+    /* background-color: #EFEFEF; */
+}
+
+table a {
+    color: rgb(82, 82, 82);
+}
+
+
+/* ====================
+    KITCHEN ORDER 
+======================*/
+
+.kitchen-active-orders {
+    margin-bottom: 15vh;
+}
