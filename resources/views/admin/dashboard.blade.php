@@ -41,6 +41,7 @@
                     
                     <h1 style="text-align: center">$10000.99</h1>
                     <h5 style="text-align: center">Revenue</h5>
+                    <p class="small text-muted text-center">Illustration only, nothing valid</p>
                     
             </div>
         </div>
@@ -69,6 +70,7 @@
                 <h5 class="text-center">Total Orders</h5>
                 <h2 class="my-4 apexcharts-yaxis-title fw-bold text-center"></h2>
                 <p class="small text-muted text-center">Number of orders being placed by now</p>
+                <p class="small text-muted text-center">Just example demo testing</p>
             </div>
         </div>
         <div class="col-lg-4 col-12 mb-lg-0 mb-3 flex-center">

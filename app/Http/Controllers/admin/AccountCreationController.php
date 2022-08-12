@@ -30,6 +30,7 @@ class AccountCreationController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'phone'=>['required','max:12'],
+            'age'=>['required','max:12'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required','min:8'],
             'role' => ['required', 'string']
@@ -39,6 +40,7 @@ class AccountCreationController extends Controller
         $user = User::create([
             'username' => $request->name,
             'phone' => $request->phone,
+            'age' => $request->age,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'role' => $request->role

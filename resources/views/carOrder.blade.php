@@ -87,6 +87,9 @@
                         </div>
                         <p class="text-muted desktop w-75">{{ $orderItem->car->description }}</p>
                     </div>
+                    <p>{{ $orderItem->user->username }}</p>
+                    <p>{{ $orderItem->user->phone }}</p>
+                    <p>{{ $orderItem->user->age }}</p>
                     <p class="price desktop">RM {{ number_format($orderItem->car->price, 2) }}</p>
                     <p class="quantity desktop">x{{ $orderItem->quantity }}</p>
                     <p class="cart-item-total desktop">RM {{ number_format($orderItem->car->price * $orderItem->quantity, 2) }}</p>
